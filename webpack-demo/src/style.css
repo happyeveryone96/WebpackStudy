@@ -1,4 +1,12 @@
+@font-face {
+  font-family: 'NanumGothic';
+  src: url('./NanumGothic-Bold.ttf') format('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
 .hello {
   color: red;
+  font-family: 'NanumGothic';
   background: url('./img.png');
 }
