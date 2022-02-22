@@ -30,6 +30,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
      publicPath: '/',
    },
    optimization: {
-    runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all',
+    },
   },
  };
