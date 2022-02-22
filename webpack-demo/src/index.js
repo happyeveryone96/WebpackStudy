@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import './style.css';
+import img from './img.png';
 
 function component() {
   const element = document.createElement('div');
@@ -7,6 +8,12 @@ function component() {
   // 이제 Lodash를 스크립트로 가져왔습니다.
   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
   element.classList.add('hello');
+
+  // 원래 있던 div 에 이미지를 추가합니다.
+  const myImg = new Image();
+  myImg.src = img;
+
+  element.appendChild(myImg);
 
   return element;
 }
