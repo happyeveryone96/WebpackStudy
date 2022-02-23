@@ -8,10 +8,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
       import: './src/index.js',
       dependOn: 'shared',
     },
-    another: {
-      import: './src/another-module.js',
-      dependOn: 'shared',
-    },
     shared: 'lodash',
   },
   devtool: 'inline-source-map',
@@ -29,9 +25,4 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
      clean: true,
      publicPath: '/',
    },
-   optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
  };
