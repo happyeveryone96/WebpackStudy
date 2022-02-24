@@ -3,26 +3,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
  module.exports = {
   mode: 'development',
-  entry: {
-    index: {
-      import: './src/index.js',
-      dependOn: 'shared',
-    },
-    shared: 'lodash',
-  },
-  devtool: 'inline-source-map',
-  devServer: {
-    static: './dist',
-  },
+  entry: './src/index.js',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Development',
+      title: 'Caching',
     }),
   ],
    output: {
-     filename: '[name].bundle.js',
+    filename: '[name].[contenthash].js',
      path: path.resolve(__dirname, 'dist'),
      clean: true,
-     publicPath: '/',
    },
  };
