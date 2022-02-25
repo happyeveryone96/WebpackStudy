@@ -9,20 +9,20 @@
  */
 (self["webpackChunkwebpack_demo"] = self["webpackChunkwebpack_demo"] || []).push([["main"],{
 
-/***/ "./src/index.js":
+/***/ 138:
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n\n\nasync function getComponent() {\n  const element = document.createElement('div');\n  const { default: _ } = await Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(__webpack_require__, /*! lodash */ \"./node_modules/lodash/lodash.js\", 23));\n\n  element.innerHTML = _.join(['Hello', 'webpack'], ' ');\n  \n  return element;\n }\n\ngetComponent().then((component) => {\n  document.body.appendChild(component);\n});\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ 486);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n\n// import Print from './print';\n\nasync function getComponent() {\n  const element = document.createElement('div');\n  const { default: _ } = await Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(__webpack_require__, /*! lodash */ 486, 23));\n\n  element.innerHTML = _.join(['Hello', 'webpack'], ' ');\n  // element.onclick = Print.bind(null, 'Hello webpack!');\n  \n  return element;\n }\n\ngetComponent().then((component) => {\n  document.body.appendChild(component);\n});\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
 
 /***/ })
 
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["vendors"], () => (__webpack_exec__("./src/index.js")));
+/******/ __webpack_require__.O(0, ["vendors"], () => (__webpack_exec__(138)));
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);
