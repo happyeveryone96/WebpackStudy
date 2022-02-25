@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
- module.exports = {
+module.exports = {
   mode: 'development',
   entry: './src/index.js',
   plugins: [
@@ -9,9 +9,21 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
       title: 'Caching',
     }),
   ],
-   output: {
+  output: {
     filename: '[name].[contenthash].js',
-     path: path.resolve(__dirname, 'dist'),
-     clean: true,
-   },
- };
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
+  },
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
+  },
+};
